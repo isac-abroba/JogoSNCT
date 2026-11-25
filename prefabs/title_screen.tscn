@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://bny875u011ya7"]
+
+[ext_resource type="Texture2D" uid="uid://dys3dbxxhapan" path="res://prefabs/title-screen.jpg" id="1_dxql2"]
+[ext_resource type="Script" uid="uid://fr03ntlomcoj" path="res://scripts/title_screen.gd" id="1_u6xng"]
+[ext_resource type="Theme" uid="uid://b6iuvsqtyxcym" path="res://default_btn.tres" id="2_aedtt"]
+[ext_resource type="Texture2D" uid="uid://bjwdglnve3nw0" path="res://sprites/Pinguim_Feminino/Jump (16 x 16).png" id="2_lmx5l"]
+
+[node name="TitleScreen" type="Control" unique_id=575981742]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u6xng")
+
+[node name="bg" type="TextureRect" parent="." unique_id=1731388454]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_dxql2")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1627941151]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=439102339]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1677269488]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1669536126]
+layout_mode = 2
+
+[node name="start_btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=97999903]
+layout_mode = 2
+theme = ExtResource("2_aedtt")
+text = "START"
+
+[node name="credits_btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=39680221]
+layout_mode = 2
+theme = ExtResource("2_aedtt")
+text = "CREDITS"
+
+[node name="quit_btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1817676765]
+layout_mode = 2
+theme = ExtResource("2_aedtt")
+text = "QUIT GAME"
+
+[node name="mochi" type="TextureRect" parent="." unique_id=1149477788]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_left = 171.0
+offset_top = 109.0
+offset_right = 235.0
+offset_bottom = 214.0
+size_flags_horizontal = 3
+texture = ExtResource("2_lmx5l")
+expand_mode = 1
+stretch_mode = 5
+flip_h = true
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/start_btn" to="." method="_on_start_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/credits_btn" to="." method="_on_credits_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/quit_btn" to="." method="_on_quit_btn_pressed"]

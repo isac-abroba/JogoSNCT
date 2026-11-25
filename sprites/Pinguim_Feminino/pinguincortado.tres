@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://x8pp5r045xyy"]
+
+[ext_resource type="Texture2D" uid="uid://kyrvgdpfwk3w" path="res://sprites/Pinguim_Feminino/Belly_Sliding (16 x 16).png" id="1_5c086"]
+
+[resource]
+atlas = ExtResource("1_5c086")
+region = Rect2(0, 0, 16, 16)

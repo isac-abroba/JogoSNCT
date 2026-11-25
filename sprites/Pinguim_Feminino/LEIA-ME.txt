@@ -1,0 +1,3 @@
+Pinguim Feminino — sprites pixel art
+
+Cada PNG mantém as dimensões, transparência, nomes e quadros de animação do sprite original (16x16 por quadro). Foi adicionado um pequeno laço rosa em pixel art.
